@@ -1,4 +1,262 @@
-h1{
-    background-color: pink;
 
+
+body {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* iphone 16 Pro Max frame settings */
+#app-container {
+    width: 100%;
+    max-width: 430px; 
+    height: 932px; 
+    display: flex;
+    flex-direction: column;
+    border: 8px solid #000;
+    border-radius: 40px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; 
+    position: relative;
+    background-color: #FFFBEB;
+}
+
+.app-screen {
+    width: 100%;
+    padding-bottom: 90px;
+}
+
+/* common settings */
+.text-dark-red { color: #8B0000  !important; }
+.bg-dark-red { background-color: #8B0000  !important; }
+.bg-yellow-btn { background-color: #EAB308 !important; color: #000 !important; }
+
+/* Top header settings */
+.burger-app-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #8B0000;
+    padding: 10px 15px 15px;
+}
+.text-highlight-yellow {
+    color: #FFC000; 
+}
+.app-header {
+    background-color: #333333;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-circle { width: 95px; height: 95px; border-radius: 50%; overflow: hidden; margin-right: 10px; }
+.logo-circle img { width: 100%; height: 100%; object-fit: cover; }
+.user-icon-circle {
+    width: 67px; height: 67px; border-radius: 50%; background-color: #EAB308;
+    display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+}
+.delivery-info { 
+    font-size: 0.85rem; 
+    line-height: 1.2; 
+    color: #E2E2E2 !important;
+}
+.header-address-container {
+    text-align: center;
+    flex-grow: 1; 
+}
+.header-address-container .fw-bold {
+    color: #FFFFFF !important;
+    font-size: 20;
+}
+.header-address-container .text-yellow-btn {
+    color: #FFFFFF;
+    font-size: 1rem;
+}
+
+/* search bar settings */
+.search-bar .form-control { 
+    border-radius: 15px !important; 
+    padding-left: 40px; 
+    background-color: #ffffff; 
+    border: none; 
+    height: 50px; 
+}
+.search-bar .input-group-text { 
+    background-color: transparent; 
+    border: none; 
+    position: absolute; 
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 2; 
+    color: #999; 
+    padding-left: 15px; 
+}
+
+/* Card style */
+.category-card, .menu-item-card {
+    overflow: hidden;
+    background-color: #FFFBEB;
+    margin-bottom: 15px;
+    border: none !important; 
+}
+.category-card img { 
+    border-radius: 15px; 
+    height: 175px; 
+    width: 100%; 
+    object-fit: cover;
+    margin-bottom: 0;
+}
+.category-card .card-body {
+    padding: 10px 0;  
+}
+.category-card .card-body p {
+    margin-bottom: 0;
+    padding: 0 5px;
+}
+
+.menu-item-card img { 
+    height: 120px; 
+    width: 100%; 
+    object-fit: cover; 
+}
+.menu-item-card .card-body { 
+    padding: 10px; 
+}
+.add-btn {
+    width: 30px; height: 30px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; line-height: 1; color: #fff;
+    background-color: #8B0000; 
+    border: none;
+}
+
+/* menu page settings */
+
+.menu-title-wrapper{
+    flex-grow:1;
+    text-align:center;
+}
+.menu-title-text{
+    color:#FFFFFF;
+    font-size: 1.2rem;
+}
+
+.menu-card{
+    background-color:#FFFFFF;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.menu-card img { 
+    border-radius: 15px; 
+    height: 140px; 
+    width: 100%; 
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+/* details page settings */
+.details-content .fw-bold-title{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.nutrition-card {
+    width: 380px;
+    background-color:#ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    padding-bottom: 120px;
+}
+.separator {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 8px 0;
+}
+.data-row{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    line-height: 1.4;
+}
+
+
+/* Footer settings */
+.app-footer {
+    position: sticky; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 10;
+    margin-top: 20px;
+}
+
+.footer-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #999;
+    text-decoration: none;
+    font-size: 0.75rem;
+    padding: 5px;
+}
+.footer-btn.active { color: #C00000; }
+.footer-btn .bi { font-size: 1.5rem; margin-bottom: 2px; }
+.cart-button {
+    width: 60px; height: 60px; border-radius: 15px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem; color: #000; transform: translateY(-10px);
+}
+
+/* Details and Cart settings */
+.detail-image-box { width: 100%; height: 250px; overflow: hidden; }
+.detail-image-box img { width: 100%; height: 100%; object-fit: cover; }
+.details-content { padding: 0 15px; }
+
+.nutritional-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.nutritional-table td, .nutritional-table th { padding: 8px 0; vertical-align: top; font-size: 0.95rem; }
+.nutritional-table tr:not(:last-child) { border-bottom: 1px solid #eee; }
+.nutritional-table th { font-weight: normal; text-align: left; color: #555; }
+.nutritional-table td { text-align: right; font-weight: bold; color: #333; }
+
+.cart-item-card { 
+    padding: 10px 0; 
+    border-bottom: 1px solid #eee;
+    background-color:#FFFFFF;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+}
+.cart-item-card img { 
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-right: 15px; }
+
+.order-summary-box { 
+    background-color: #fff; 
+    border-radius: 15px; 
+    padding: 20px; }
+
+.bottom-fixed-button {
+    background-color: #fff;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
 }
